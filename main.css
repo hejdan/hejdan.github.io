@@ -18,8 +18,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 50%;
-    transform: translateY(-50%);
+    padding-top: 35%;
+    transform: translateY(-60%);
 }
 
 .item {
@@ -48,3 +48,25 @@ body {
 .item:hover {
     background: #3c3c3c
 }
+
+.clock {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+#clock {
+    color: white;
+    font-size: 35px;
+    user-select: none;
+}
+
+/*.colormode {
+    display: flex;
+    justify-content: center;
+}
+
+.darkmode {
+    width: 20px;
+}*/
