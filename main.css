@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 250px;
+    margin-top: 120px;
 }
 
 .item {
@@ -52,8 +52,7 @@ body {
 .clock {
     display: flex;
     justify-content: center;
-    margin-top: 90px;
-    margin-bottom: 100px;
+    margin-top: 190px;
 }
 
 #clock {
