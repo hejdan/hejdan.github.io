@@ -45,4 +45,4 @@ function updateTime() {
     var t_str = hours + ":" + minutes + ":" + seconds;
     clock.innerHTML = t_str;
 }
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1);
