@@ -18,7 +18,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 15%;
+    transform: translateY(-50%);
 }
 
 .item {
@@ -26,9 +27,9 @@ body {
     width: 150px;
     background: #2f2f2f;
     border-radius: 5%;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 15px;
     cursor: pointer;
+    transition: background 0.2s ease-in-out;
 }
 
 .letter {
@@ -46,17 +47,29 @@ body {
 }
 
 .item:hover {
-    background: #3c3c3c
+    background: #3c3c3c;
+    box-shadow: 2px 2px black;
 }
 
 .clock {
     display: flex;
     justify-content: center;
-    margin-top: 190px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 #clock {
     color: white;
     font-size: 35px;
     user-select: none;
+}
+
+.JokeSection {
+    widows: 100vw;
+    margin-bottom: 100px;
+}
+
+.Joke {
+    text-align: center;
+    color: white;
 }
