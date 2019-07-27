@@ -4,25 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startpage</title>
+    <title>Document</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body onload="GenerateJoke()">
 
     <section class="clock">
         <h1 id="clock"></h1>
     </section>
 
     <section class="items">
-        <div class="item" id="Reddit">
-            <h1 class="letter">R</h1>
-            <h5 class="name">Reddit</h5>
-        </div>
-        <div class="item" id="Facebook">
-            <h1 class="letter">F</h1>
-            <h5 class="name">Facebook</h5>
-        </div>
         <div class="item" id="Youtube">
             <h1 class="letter">Y</h1>
             <h5 class="name">Youtube</h5>
@@ -31,11 +23,29 @@
             <h1 class="letter">N</h1>
             <h5 class="name">Netflix</h5>
         </div>
+        <div class="item" id="Reddit">
+            <h1 class="letter">R</h1>
+            <h5 class="name">Reddit</h5>
+        </div>
         <div class="item" id="Ae27ff">
             <h1 class="letter">A</h1>
             <h5 class="name">Ae27ff</h5>
         </div>
+        <div class="item" id="Github">
+            <h1 class="letter">G</h1>
+            <h5 class="name">Github</h5>
+        </div>
+        <div class="item" id="Facebook">
+            <h1 class="letter">F</h1>
+            <h5 class="name">Facebook</h5>
+        </div>
     </section>
+    <div class="JokeSection">
+        <h1 class="Joke"></h1>
+    </div>
+    <!--<div class="colormode">
+        <input type="range" id="darkmode" class="darkmode" max="10" min="0" step="10" value="0">
+    </div>-->
     <script src="main.js"></script>
 </body>
 
