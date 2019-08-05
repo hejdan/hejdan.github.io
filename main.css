@@ -1,75 +1,66 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #101010;
+  background: #484848;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  place-items: center;
+  justify-content: center;
+}
+
+img {
+  width: auto;
+  height: 400px;
+  overflow: hidden;
+  transform: skew(-15deg);
+  user-select: none;
+  border-radius: 5px;
+  transition: height 0.15s ease-in-out;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: height 0.15s ease-in-out;
+  -moz-transition: height 0.15s ease-in-out;
+  -ms-transition: height 0.15s ease-in-out;
+  -o-transition: height 0.15s ease-in-out;
+}
+
+img:hover {
+  height: 450px;
+  width: auto;
+}
+
+@media only screen and (max-width: 1121px) {
+  img {
     height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    width: auto;
+    transform: skew(0deg);
+    border-radius: 0px;
+  }
+
+  img:hover {
+    height: 100vh;
+  }
 }
 
-.items {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 15%;
-    transform: translateY(-50%);
-}
+@media only screen and (max-width: 320px) {
+  .container {
+    display: grid;
+    overflow: visible;
+    width: 320px;
+  }
 
-.item {
-    height: 200px;
-    width: 150px;
-    background: #2f2f2f;
-    border-radius: 5%;
-    margin: 15px;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
-}
-
-.letter {
-    text-align: center;
-    padding-top: 50px;
-    color: white;
-    user-select: none;
-}
-
-.name {
-    text-align: center;
-    padding-top: 10px;
-    color: white;
-    user-select: none;
-}
-
-.item:hover {
-    background: #3c3c3c;
-    box-shadow: 2px 2px black;
-}
-
-.clock {
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
-    margin-bottom: 100px;
-}
-
-#clock {
-    color: white;
-    font-size: 35px;
-    user-select: none;
-}
-
-.JokeSection {
-    widows: 100vw;
-    margin-bottom: 100px;
-}
-
-.Joke {
-    text-align: center;
-    color: white;
+  .img {
+    width: 320px;
+  }
 }
