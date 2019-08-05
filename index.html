@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-
-<body onload="GenerateJoke()">
-
-    <section class="clock">
-        <h1 id="clock"></h1>
-    </section>
-
-    <section class="items">
-        <div class="item" id="Youtube">
-            <h1 class="letter">Y</h1>
-            <h5 class="name">Youtube</h5>
-        </div>
-        <div class="item" id="Netflix">
-            <h1 class="letter">N</h1>
-            <h5 class="name">Netflix</h5>
-        </div>
-        <div class="item" id="Reddit">
-            <h1 class="letter">R</h1>
-            <h5 class="name">Reddit</h5>
-        </div>
-        <div class="item" id="Ae27ff">
-            <h1 class="letter">A</h1>
-            <h5 class="name">Ae27ff</h5>
-        </div>
-        <div class="item" id="Github">
-            <h1 class="letter">G</h1>
-            <h5 class="name">Github</h5>
-        </div>
-        <div class="item" id="Facebook">
-            <h1 class="letter">F</h1>
-            <h5 class="name">Facebook</h5>
-        </div>
-    </section>
-    <div class="JokeSection">
-        <h1 class="Joke"></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=§, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Startpage</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body id="body">
+    <div class="container">
+      <img src="Images/YouTube.png" draggable="false" id="youtube" />
+      <img src="Images/Reddit.png" draggable="false" id="reddit" />
+      <img src="Images/AE.png" draggable="false" id="ae" />
+      <img src="Images/Facebook.png" draggable="false" id="facebook" />
+      <img src="Images/Github.png" draggable="false" id="github" />
+      <img src="Images/Netflix.png" draggable="false" id="netflix" />
     </div>
-    <!--<div class="colormode">
-        <input type="range" id="darkmode" class="darkmode" max="10" min="0" step="10" value="0">
-    </div>-->
     <script src="main.js"></script>
-</body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script>
+      if (annyang) {
+        // Let's define our first command. First the text we expect, and then the function it should call
+        var commands = {
+          "Open youtube": function() {
+            self.location.href = "https://www.youtube.com";
+          },
+          "Open netflix": function() {
+            self.location.href = "https://www.netflix.com";
+          },
+          "Open facebook": function() {
+            self.location.href = "https://www.facebook.com";
+          },
+          "Open github": function() {
+            self.location.href = "https://www.github.com";
+          },
+          "Open Reddit": function() {
+            self.location.href = "https://www.Reddit.com";
+          },
+          "Open ae": function() {
+            self.location.href = "http://ae27ff.meme.tips";
+          },
+          "Show Commands": function() {
+            console.log(commands);
+          }
+        };
 
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+
+        // Start listening. You can call this here, or attach this call to an event, button, etc.
+        annyang.start();
+      }
+    </script>
+  </body>
 </html>
