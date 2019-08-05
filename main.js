@@ -1,81 +1,84 @@
-let Reddit = document.querySelector("#Reddit");
-let Facebook = document.querySelector("#Facebook");
-let Youtube = document.querySelector("#Youtube");
-let Netflix = document.querySelector("#Netflix");
-let Ae27ff = document.querySelector("#Ae27ff");
-let Github = document.querySelector("#Github");
+let Youtube = document.querySelector("#youtube");
+let Reddit = document.querySelector("#reddit");
+let Netflix = document.querySelector("#netflix");
+let Github = document.querySelector("#github");
+let Facebook = document.querySelector("#facebook");
+let Ae = document.querySelector("#ae");
+let Body = document.querySelector("#body");
 
-let clock = document.querySelector("#clock");
-
-let Joke = document.querySelector(".Joke");
-
-const api = 'https://official-joke-api.appspot.com/jokes/programming/random';
-
-
-
-
-Reddit.addEventListener("click", () => {
-    self.location.href = "https://www.reddit.com";
-});
-
-Facebook.addEventListener("click", () => {
-    self.location.href = "https://www.facebook.com";
-});
+//Goes to the hyperlink connected to the image if clicked
 
 Youtube.addEventListener("click", () => {
-    self.location.href = "https://www.youtube.com";
+  self.location.href = "https://www.youtube.com";
+});
+
+Reddit.addEventListener("click", () => {
+  self.location.href = "https://www.Reddit.com";
 });
 
 Netflix.addEventListener("click", () => {
-    self.location.href = "https://www.netflix.com";
-});
-
-Ae27ff.addEventListener("click", () => {
-    self.location.href = "http://ae27ff.meme.tips";
+  self.location.href = "https://www.Netflix.com";
 });
 
 Github.addEventListener("click", () => {
-    self.location.href = "https://www.github.com";
+  self.location.href = "https://www.Github.com";
 });
 
+Facebook.addEventListener("click", () => {
+  self.location.href = "https://www.Facebook.com";
+});
 
-function updateTime() {
-    var currentTime = new Date()
-    var hours = currentTime.getHours()
-    var minutes = currentTime.getMinutes()
-    var seconds = currentTime.getSeconds()
-    if (hours < 10) {
-        hours = "0" + hours
-    }
-    if (minutes < 10) {
-        minutes = "0" + minutes
-    }
-    if (seconds < 10) {
-        seconds = "0" + seconds
-    }
-    var t_str = hours + ":" + minutes + ":" + seconds;
-    clock.innerHTML = t_str;
+Ae.addEventListener("click", () => {
+  self.location.href = "http://ae27ff.meme.tips";
+});
 
-}
-setInterval(updateTime, 1);
+//Changes the bodys background color depending of which image mouse is over
 
-function GenerateJoke() {
-    fetch(api)
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            Joke.innerHTML = data[0].setup;
+Youtube.addEventListener("mouseenter", () => {
+  body.style.background = "#911f00";
+});
 
-            Joke.addEventListener("click", () => {
+Reddit.addEventListener("mouseenter", () => {
+  body.style.background = "#cf6400";
+});
 
-                if (Joke.innerHTML == data[0].setup) {
-                    Joke.innerHTML = data[0].punchline;
-                } else if (Joke.innerHTML == data[0].punchline) {
-                    Joke.innerHTML = data[0].setup;
-                }
+Netflix.addEventListener("mouseenter", () => {
+  body.style.background = "#0f0f0f";
+});
 
-            });
+Github.addEventListener("mouseenter", () => {
+  body.style.background = "#2b2b2b";
+});
 
-        })
-}
+Facebook.addEventListener("mouseenter", () => {
+  body.style.background = "#335bff";
+});
+
+Ae.addEventListener("mouseenter", () => {
+  body.style.background = "green";
+});
+
+//removing bodys background color
+Youtube.addEventListener("mouseout", () => {
+  body.style.background = "#484848";
+});
+
+Reddit.addEventListener("mouseout", () => {
+  body.style.background = "#484848";
+});
+
+Netflix.addEventListener("mouseout", () => {
+  body.style.background = "#484848";
+});
+
+Github.addEventListener("mouseout", () => {
+  body.style.background = "#484848";
+});
+
+Facebook.addEventListener("mouseout", () => {
+  body.style.background = "#484848";
+});
+
+Ae.addEventListener("mouseout", () => {
+  body.style.background = "#484848";
+});
