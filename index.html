@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=§, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Startpage</title>
     <link rel="stylesheet" href="main.css" />
   </head>
-  <body id="body">
+  <body id="body" onload="GenerateJoke()">
     <div class="container">
       <img src="Images/YouTube.png" draggable="false" id="youtube" />
       <img src="Images/Reddit.png" draggable="false" id="reddit" />
@@ -16,8 +16,13 @@
       <img src="Images/Github.png" draggable="false" id="github" />
       <img src="Images/Netflix.png" draggable="false" id="netflix" />
     </div>
+
+    <div class="JokeSection">
+      <h1 class="Joke"></h1>
+    </div>
+
     <script src="main.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script>
       if (annyang) {
         // Let's define our first command. First the text we expect, and then the function it should call
