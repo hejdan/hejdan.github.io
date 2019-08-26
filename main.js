@@ -30,7 +30,8 @@ function GenerateJoke() {
 
 //Goes to the hyperlink connected to the image if clicked
 Youtube.addEventListener("click", () => {
-self.location.href = "https://www.youtube.com";});
+self.location.href = "https://www.youtube.com";
+});
 
 Reddit.addEventListener("click", () => {
   self.location.href = "https://www.Reddit.com";
